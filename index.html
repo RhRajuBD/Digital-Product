@@ -3,141 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Digital Product</title>
-
+<title>Digital Product</title>
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f8f9fa;
+body{
+    margin:0;
+    font-family: Arial;
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
 }
-
-/* Hero */
-.hero {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+.container{
+    padding:40px;
 }
-
-.hero h1 {
-    font-size: 36px;
+h1{
+    font-size:32px;
+    color:#38bdf8;
 }
-
-.hero p {
-    font-size: 18px;
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    max-width:400px;
+    margin:auto;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
-
-/* Button */
-.btn {
-    background: #28a745;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 20px;
+.price{
+    font-size:28px;
+    margin:15px 0;
+    color:#22c55e;
 }
-
-.btn:hover {
-    background: #218838;
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#22c55e;
+    color:#000;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
 }
-
-/* Section */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Testimonials */
-.testimonial {
-    font-style: italic;
-    margin: 10px 0;
-}
-
-/* Footer */
-.footer {
-    background: #222;
-    color: white;
-    padding: 20px;
-    text-align: center;
+.footer{
+    margin-top:20px;
+    font-size:14px;
+    color:#94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<div class="container">
     <h1>🔥 Premium Digital Product</h1>
-    <p>Boost your skills & income instantly</p>
-    <h2>Only ৳299</h2>
 
-    <button class="btn" onclick="payNow()">Buy Now</button>
-</div>
+    <div class="card">
+        <h2>Product Name</h2>
+        <p>Get high quality digital product instantly!</p>
 
-<!-- FEATURES -->
-<div class="section">
-    <h2>What You Will Get</h2>
+        <div class="price">৳299</div>
 
-    <div class="features">
-        <div class="card">✔ Instant Access</div>
-        <div class="card">✔ Lifetime Use</div>
-        <div class="card">✔ High Quality Content</div>
-        <div class="card">✔ Beginner Friendly</div>
+        <!-- PAYMENT BUTTON -->
+        <a class="btn" href="https://rhraju.paymently.io/paymentlink/default/BDT" target="_blank">
+            Buy Now
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 Your Brand
     </div>
 </div>
-
-<!-- DETAILS -->
-<div class="section">
-    <h2>Product Details</h2>
-    <p>This digital product will help you grow faster and smarter.  
-    Perfect for beginners and professionals.</p>
-
-    <button class="btn" onclick="payNow()">Get Access Now</button>
-</div>
-
-<!-- TESTIMONIAL -->
-<div class="section">
-    <h2>Customer Reviews</h2>
-
-    <p class="testimonial">"Amazing product! Totally worth it." ⭐⭐⭐⭐⭐</p>
-    <p class="testimonial">"Helped me a lot!" ⭐⭐⭐⭐⭐</p>
-</div>
-
-<!-- FINAL CTA -->
-<div class="hero">
-    <h2>Limited Offer 🔥</h2>
-    <p>Don't miss this chance</p>
-
-    <button class="btn" onclick="payNow()">Buy Now - ৳299</button>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-    <p>© 2026 Your Brand | All Rights Reserved</p>
-</div>
-
-<script>
-function payNow() {
-    // এখানে তোমার UddoktaPay link বসাও
-    window.location.href = "https://rhraju.paymently.io/paymentlink/default/BDT";
-}
-</script>
 
 </body>
 </html>
