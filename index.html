@@ -1,100 +1,143 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bengali Software | প্রফেশনাল স্টোর</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        :root { --primary: #4f46e5; --glass: rgba(255, 255, 255, 0.95); }
-        body { font-family: 'Hind Siliguri', sans-serif; background: #0f172a; margin: 0; color: #1e293b; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Digital Product</title>
 
-        /* ড্রয়ার মেনু */
-        .drawer { height: 100%; width: 0; position: fixed; z-index: 1000; top: 0; left: 0; background: #1e293b; overflow-x: hidden; transition: 0.4s; padding-top: 60px; box-shadow: 2px 0 10px rgba(0,0,0,0.5); }
-        .drawer a { padding: 15px 25px; text-decoration: none; font-size: 1.1rem; color: white; display: block; transition: 0.3s; }
-        .drawer a:hover { background: var(--primary); }
-        .close-btn { position: absolute; top: 20px; right: 25px; font-size: 2rem; color: white; cursor: pointer; }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+}
 
-        /* টপ বার */
-        .top-bar { padding: 20px; background: #0f172a; display: flex; align-items: center; position: sticky; top: 0; z-index: 999; }
-        .menu-icon { font-size: 1.5rem; cursor: pointer; color: white; }
-        
-        .header { text-align: center; padding: 40px 20px; background: linear-gradient(45deg, #1e1b4b, #4338ca, #6d28d9); color: white; border-bottom: 5px solid #8b5cf6; }
-        .container { max-width: 700px; margin: -50px auto 50px; padding: 20px; }
-        
-        .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
-        .app-card { background: var(--glass); padding: 20px; border-radius: 24px; text-align: center; text-decoration: none; color: #1e293b; transition: all 0.4s; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); }
-        .app-card:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .app-card img { width: 70px; height: 70px; border-radius: 20px; margin-bottom: 15px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .app-card h3 { font-size: 1rem; margin: 0; font-weight: 700; }
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        .footer { text-align: center; padding: 30px; color: #94a3b8; }
-        .social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
-        .social-btn { width: 45px; height: 45px; border-radius: 12px; background: #1e293b; display: inline-flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; }
-        .social-btn:hover { background: var(--primary); }
-    </style>
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Button */
+.btn {
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+/* Section */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Testimonials */
+.testimonial {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
 </head>
+
 <body>
 
-    <div id="myDrawer" class="drawer">
-        <span class="close-btn" onclick="closeNav()">&times;</span>
-        <a href="#" onclick="navigate('index.html')"><i class="fas fa-home"></i> হোম</a>
-        <a href="#" onclick="navigate('category.html')"><i class="fas fa-th-large"></i> ক্যাটাগরি</a>
-        <a href="#" onclick="navigate('favorite.html')"><i class="fas fa-heart"></i> প্রিয় অ্যাপ</a>
-        <a href="#" onclick="navigate('developer.html')"><i class="fas fa-user"></i> প্রোফাইল</a>
+<!-- HERO -->
+<div class="hero">
+    <h1>🔥 Premium Digital Product</h1>
+    <p>Boost your skills & income instantly</p>
+    <h2>Only ৳299</h2>
+
+    <button class="btn" onclick="payNow()">Buy Now</button>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+    <h2>What You Will Get</h2>
+
+    <div class="features">
+        <div class="card">✔ Instant Access</div>
+        <div class="card">✔ Lifetime Use</div>
+        <div class="card">✔ High Quality Content</div>
+        <div class="card">✔ Beginner Friendly</div>
     </div>
+</div>
 
-    <div class="top-bar">
-        <i class="fas fa-bars menu-icon" onclick="openNav()"></i>
-    </div>
+<!-- DETAILS -->
+<div class="section">
+    <h2>Product Details</h2>
+    <p>This digital product will help you grow faster and smarter.  
+    Perfect for beginners and professionals.</p>
 
-    <div class="header">
-        <h1>Bengali Software</h1>
-        <p style="opacity: 0.8;">আধুনিক অ্যাপগুলোর অফিশিয়াল স্টোর</p>
-    </div>
+    <button class="btn" onclick="payNow()">Get Access Now</button>
+</div>
 
-    <div class="container">
-        <div class="app-grid">
-            <a href="#" onclick="navigate('smart-school.html')" class="app-card">
-                <img src="app_icon.png" alt="App">
-                <h3>Smart School</h3>
-            </a>
-            <a href="#" onclick="navigate('lal-blood.html')" class="app-card">
-                <img src="ic_love.png" alt="App">
-                <h3>Love Check</h3>
-            </a>
-        </div>
-    </div>
+<!-- TESTIMONIAL -->
+<div class="section">
+    <h2>Customer Reviews</h2>
 
-    <footer class="footer">
-        <p>ডেভেলপারের সাথে যোগাযোগ</p>
-        <div class="social-links">
-            <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>&copy; 2026 Bengali Software</p>
-    </footer>
+    <p class="testimonial">"Amazing product! Totally worth it." ⭐⭐⭐⭐⭐</p>
+    <p class="testimonial">"Helped me a lot!" ⭐⭐⭐⭐⭐</p>
+</div>
 
-    <script>
-        function openNav() { document.getElementById("myDrawer").style.width = "250px"; }
-        function closeNav() { document.getElementById("myDrawer").style.width = "0"; }
-        
-        // ন্যাভিগেশন ফাংশন (হিস্ট্রি সমস্যা এড়াতে)
-        function navigate(url) {
-            window.location.replace(url);
-        }
+<!-- FINAL CTA -->
+<div class="hero">
+    <h2>Limited Offer 🔥</h2>
+    <p>Don't miss this chance</p>
 
-        // ড্রয়ারের বাইরে ক্লিক করলে বন্ধ হওয়ার অপশন
-        document.addEventListener('click', function(event) {
-            var drawer = document.getElementById("myDrawer");
-            var menuIcon = document.querySelector('.menu-icon');
-            if (!drawer.contains(event.target) && !menuIcon.contains(event.target)) {
-                closeNav();
-            }
-        });
-    </script>
+    <button class="btn" onclick="payNow()">Buy Now - ৳299</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 Your Brand | All Rights Reserved</p>
+</div>
+
+<script>
+function payNow() {
+    // এখানে তোমার UddoktaPay link বসাও
+    window.location.href = "rhraju.paymently.io";
+}
+</script>
+
 </body>
 </html>
